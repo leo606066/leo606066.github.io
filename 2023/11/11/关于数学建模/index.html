@@ -1,0 +1,83 @@
+<!DOCTYPE html><html lang="en" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>数学建模 | Leo越越的博客</title><link rel="icon" type="image/x-icon" href="../../../../favicon.ico"><script>var config = {"root":"/project/","search":{"preload":false,"activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"copy"}}</script><script src="//unpkg.com/mermaid@10.5.0/dist/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad: false});</script><link type="text/css" rel="stylesheet" href="../../../../lib/encrypt/hbe.style.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="../../../../lib/fontawesome/css/all.min.css"><link rel="stylesheet" href="../../../../css/arknights.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: Bender;
+ src: local('Bender'), url("/project/font/Bender.ttf"), url("/project/font/Bender.otf");
+}
+@font-face {
+ font-family: BenderLight;
+ src: local('BenderLight'), url("/project/font/BenderLight.ttf");
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/project/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+  --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+  --light-background: url('../../../../img/bk.jpg');
+  --theme-encrypt-confirm: 'confirm'
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="../../../../"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="../../../../archives/"><span class="navItemTitle">Archives</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>数学建模</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2023-11-11T11:17:16.000Z" id="date"> 2023-11-11</time></div></span><br><span>Last Update: <div class="control"><time datetime="2023-11-11T11:24:09.017Z" id="updated"> 2023-11-11</time></div></span></div></div><hr><div id="post-content"><p>略略略 </p>
+<h1 id="看看高中课题"><a href="#看看高中课题" class="headerlink" title="看看高中课题"></a>看看高中课题</h1><h1 id="Python程序代码："><a href="#Python程序代码：" class="headerlink" title="Python程序代码："></a>Python程序代码：</h1><p>import numpy as np  #引入外部扩展程序库NumPy并简写为“np”<br>import pandas as pd #引入外部扩展程序库pandas并简写为“pd”<br>import matplotlib as mpl #引入外部扩展程序库matplotlib并简写为“mpl”，该库属于画图的指令库<br>import matplotlib.pyplot as plt #引入外部扩展程序库matplotlib中的pyplot命令，并简写为“plt”，该库属于画图的指令库<br>from sklearn.preprocessing import MinMaxScaler #从外部扩展程序库sklearn中的preprocessing命令中引入MinMaxScaler指令，用于归一化</p>
+<p>mpl.rcParams[‘font.sans-serif’] &#x3D; [u’simHei’] ##用来正常显示中文标签<br>mpl.rcParams[‘axes.unicode_minus’] &#x3D; False ##用来正常显示正负号<br>df &#x3D; pd.read_csv(‘JXwater.csv’, encoding&#x3D;’utf-8’)  #从文件JXwater.csv中引入数据，数据格式为utf-8</p>
+<p>max_epochs &#x3D; 60000  #迭代次数<br>learn_rate &#x3D; 0.025 #学习率<br>mse_final &#x3D; 6.5e-4 #误差限阈值</p>
+<p>input_number &#x3D; 4 #模型设置4个输入<br>out_number &#x3D; 1 #模型设置1个输出<br>hidden_unit_number &#x3D;20  #隐藏层个数设置为20</p>
+<p>w1 &#x3D; 0.5 * np.random.rand(hidden_unit_number, input_number) - 0.1 #返回hidden*input维度随机数组</p>
+<p>b1 &#x3D; 0.5 * np.random.rand(hidden_unit_number, 1) - 0.1 #返回hidden*output维度随机数组</p>
+<p>w2 &#x3D; 0.5 * np.random.rand(out_number, hidden_unit_number) - 0.1</p>
+<p>b2 &#x3D; 0.5 * np.random.rand(out_number, 1) - 0.1</p>
+<p>x &#x3D; df[[‘日期’,’杭嘉湖分区平均’, ‘嘉兴站降雨’,’南排水量’]]</p>
+<p>y &#x3D; df[[‘嘉兴水位’]]<br>time&#x3D;df[[‘日期’]] #变量time来代表日期</p>
+<p>sample_number &#x3D; x.shape[0] #sample_number为样本数量<br>print(“sample_number&#x3D; “,sample_number) #输出样本数量</p>
+<p>x_scaler &#x3D; MinMaxScaler(feature_range&#x3D;(-1, 1))<br>y_scaler &#x3D; MinMaxScaler(feature_range&#x3D;(-1, 1))<br>x &#x3D; x_scaler.fit_transform(x)<br>y &#x3D; y_scaler.fit_transform(y)</p>
+<p>sample_in &#x3D; x.T<br>sample_out &#x3D; y.T<br>#输出结果用于检查<br>print(sample_in)<br>print(sample_out)<br>#定义sigmoid阈值函数<br>def sigmoid(z):<br>    return 1.0 &#x2F; (1.0 + np.exp(-z))</p>
+<p>mse_history &#x3D; [] #新建空数组，后面用于存放真实值与实际值误差，并通过迭代来逐步缩小误差，直到满足<mse_final>迭代停止</p>
+<p>for i in range(max_epochs): # max_epochs迭代次数<br>    # FP过程，误差前向传播过程<br>    # 隐藏层的输出<br>    hidden_out &#x3D; sigmoid(np.dot(w1, sample_in).transpose() + b1.transpose()).transpose()</p>
+<pre><code># 输出层的输出（为了简化我们的写法，输出层不进行sigmoid激活）
+network_out = (np.dot(w2, hidden_out).transpose() + b2.transpose()).transpose()
+
+# 误差值
+err = sample_out - network_out  #误差值err=实际输出值-网络训练输出值
+mse = np.average(np.square(err)) #求均方误差
+mse_history.append(mse) #误差累积值存放在mse_history中
+min_mse=min(mse_history[i-1],mse_history[i]) #min_mse为累积误差的最小值
+#如果mse小于误差限阈值则迭代终止，跳出循环
+if mse &lt; mse_final:
+    break
+
+# BP 过程，误差反向传播过程
+delta2 = -err #输出层到隐藏层误差
+delta1 = np.dot(w2.transpose(), delta2) * hidden_out * (1 - hidden_out) #隐藏层到输入层误差
+dw2 = np.dot(delta2, hidden_out.transpose())
+db2 = np.dot(delta2, np.ones((sample_number, 1)))
+dw1 = np.dot(delta1, sample_in.transpose())
+db1 = np.dot(delta1, np.ones((sample_number, 1)))
+w2 -= learn_rate * dw2 #误差调整后的w2
+b2 -= learn_rate * db2
+w1 -= learn_rate * dw1 #误差调整后的w1
+b1 -= learn_rate * db1
+</code></pre>
+<p>#&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;成果图输出（包括1个误差曲线图、1个BP网络计算成果和实际输出结果的水位过程对比图，<br>#以及1个未来1d BP网络预测成果和实际水位过程对比图&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>#fig.1#误差曲线图<br>mse_history10 &#x3D; np.log10(mse_history) #取误差对数值，为了看到误差收敛的变化情况<br>min_mse &#x3D; min(mse_history10)<br>print(“min_mse”,min_mse) #输出min_mse<br>plt.plot(mse_history10) #画误差变化过程图<br>print(“min_mse&#x3D;”,min_mse)<br>plt.plot([0, len(mse_history10)], [min_mse, min_mse])<br>ax &#x3D; plt.gca()<br>ax.set_yticks([-2, -1, 0, 1, 2, min_mse])<br>ax.set_xlabel(‘iteration’)<br>ax.set_ylabel(‘MSE’)<br>ax.set_title(‘Log10 MSE History’)<br>plt.show()</p>
+<p>df1 &#x3D; pd.read_csv(‘JXwater_test.csv’, encoding&#x3D;’utf-8’) # 读取预测集<br>#预测集，利用前面训练好的BP神经网络，将预测数据所谓输入给到BP，获得输出的水位预测结果<br>x1 &#x3D; df1[[‘日期’,’杭嘉湖分区平均’, ‘嘉兴站降雨’,’南排水量’]] #预测集输入<br>y1 &#x3D; df1[[‘嘉兴水位’]] #真实值<br>x1_scaler &#x3D; MinMaxScaler(feature_range&#x3D;(-1, 1))<br>y1_scaler &#x3D; MinMaxScaler(feature_range&#x3D;(-1, 1))<br>x1 &#x3D; x1_scaler.fit_transform(x1)<br>y1 &#x3D; y1_scaler.fit_transform(y1)<br>test_in&#x3D;x1.T</p>
+<p>hidden_out &#x3D; sigmoid((np.dot(w1, sample_in).transpose() + b1.transpose())).transpose()<br>network_out &#x3D; (np.dot(w2, hidden_out).transpose() + b2.transpose()).transpose()<br>sample_out &#x3D; y_scaler.inverse_transform(y)</p>
+<p>network_out &#x3D; y_scaler.inverse_transform(network_out.T)</p>
+<p>#fig.2#嘉兴水位BP模拟与实测过程对比图<br>fig, axes &#x3D; plt.subplots(nrows&#x3D;1, ncols&#x3D;1, figsize&#x3D;(12, 10)) #设置图片的位置及大小（figsize）<br>line1, &#x3D; axes.plot(network_out[:, 0], ‘k’, marker&#x3D;’o’) #图中第一条线，训练值，用黑色圆点表示<br>line2, &#x3D; axes.plot(sample_out[:, 0], ‘r’, markeredgecolor&#x3D;’b’, marker&#x3D;’*’, markersize&#x3D;9) #图中第二条线，实测值，用五角星表示<br>axes.legend((line1, line2), (‘forcast’, ‘real’), loc&#x3D;’upper left’)<br>axes.set_title(‘嘉兴水位模拟与实测过程’)</p>
+<p>#fig.3# BP预测输出和实际输出对比图<br>test_hidden_out &#x3D; sigmoid((np.dot(w1, test_in).transpose() + b1.transpose())).transpose()<br>test_network_out &#x3D; (np.dot(w2, test_hidden_out).transpose() + b2.transpose()).transpose()<br>test_out &#x3D; y1_scaler.inverse_transform(y1)</p>
+<p>test_network_out &#x3D; y1_scaler.inverse_transform(test_network_out.T)<br>test_out &#x3D; y1_scaler.inverse_transform(y1)<br>print(“test_network_out”,test_network_out)<br>#调用作图指令↓<br>fig, axes &#x3D; plt.subplots(nrows&#x3D;1, ncols&#x3D;1, figsize&#x3D;(12, 10))#设置图片的位置及大小（figsize）<br>line1, &#x3D; axes.plot(test_network_out[:, 0], ‘k’, marker&#x3D;’o’)#图中第一条线，预测值，用黑色圆点表示<br>line2, &#x3D; axes.plot(test_out[:, 0], ‘r’, markeredgecolor&#x3D;’b’, marker&#x3D;’*’, markersize&#x3D;9)#图中第二条线，实测值，用五角星表示<br>axes.legend((line1, line2), (‘forcast’, ‘real’), loc&#x3D;’upper left’)<br>axes.set_title(‘嘉兴水位预测集与实测’)</p>
+<p>plt.show()#在计算机界面显示上述3幅图</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages" style="justify-content: flex-end"><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="../About/"> Prev →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="To Catalog">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="Change Theme"></a></div></div></article><aside><div id="about"><a href="/project/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">June Leo</a></h1><div id="description"><p></p></div></div><div id="aside-block"><div id="toc-div"><h1>Catalog</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9C%8B%E7%9C%8B%E9%AB%98%E4%B8%AD%E8%AF%BE%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">看看高中课题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Python%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81%EF%BC%9A"><span class="toc-number">2.</span> <span class="toc-text">Python程序代码：</span></a></li></ol></div></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas><script src="../../../../js/search.js"></script><script src="../../../../js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="../../../../lib/encrypt/hbe.js"></script><script src="../../../../js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></body></html>
